@@ -105,7 +105,7 @@ const append = (arr1, arr2) => {
   let arrOne = arr1;
   let arrTwo = arr2;
   for (var i = 0;i < arrTwo.lenght; i++){
-    arr1.push(arrTwo[i]);
+    arrOne.push(arrTwo[i]);
   }
 };
 /* ------------------------------------------------------------------------------------------------
