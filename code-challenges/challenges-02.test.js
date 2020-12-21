@@ -102,11 +102,13 @@ console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
 const append = (arr1, arr2) => {
-  let arrOne = arr1;
-  let arrTwo = arr2;
-  for (var i = 0;i < arrTwo.lenght; i++){
-    arrOne.push(arrTwo[i]);
-  }
+  let a = arr1;
+  let b = arr2;
+
+  b.forEach((value, i) => {
+    a.push(arr2[i]);
+  });
+
 };
 /* ------------------------------------------------------------------------------------------------
 TESTS
