@@ -37,9 +37,10 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const templateWithJQuery = () => {
-  // Write a function named templateWithJQuery that uses jQuery to get the html template from the DOM, copy the contents, fill it with the Star Wars People, and append it to the DOM.
+
   starWarsPeople.forEach(value => {
     let $template = $('#template').clone();
+    $template.removeAttr('id');
     $template.find('h2').text(value.name);
     $template.find('h3').text(value.height);
     $template.find('p').text(value.eye_color);
@@ -261,7 +262,7 @@ describe('Testing challenge 1', () => {
     templateWithJQuery();
     expect($('section:nth-child(2) h2').text()).toStrictEqual('Luke Skywalker');
     expect($('section:nth-child(3) h3').text()).toStrictEqual('167');
-    expect($('section:nth-child(5) p').text()).toStrictEqual('red');
+    expect($('section:nth-child(4) p').text()).toStrictEqual('red');
   })
 });
 
