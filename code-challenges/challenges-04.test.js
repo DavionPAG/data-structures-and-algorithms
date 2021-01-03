@@ -39,9 +39,7 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  /\d/;
-
-  return input.match;
+  return (/[\d]/g).test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,7 +51,7 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  /\b[A-Z]\w*\b/gm;
+  return (str.match(/[A-Z]\w*/g)) || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,7 +61,12 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let newArr = [];
+  arr.forEach(idx => {
+    if ((/^[A-J]/gm).test(idx) === true)
+      newArr.push(idx);
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -172,7 +175,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
 
   test('It should return the cities whose names begin with the letters A through J', () => {
