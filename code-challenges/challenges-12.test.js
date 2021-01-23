@@ -43,10 +43,10 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 const grandTotal = (stores) => {
   let hrlyTotal = [];
 
-  for (var i = 0; i < stores.length; i++) {
+  for (var i = 0; i < hoursOpen.length; i++) {
     var totals = 0;
-    for (var j = 0; j < stores[i].length; j++) {
-      totals += stores[i][j];
+    for (var j = 0; j < stores.length; j++) {
+      totals += stores[j][i];
     }
     hrlyTotal.push(totals);
   }
@@ -64,7 +64,12 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let hourlySales = grandTotal(cookieStores);
+  data = [];
+  hourlySales.forEach((salesPerHr, ind) => {
+    data.push({ sales: `${salesPerHr} cookies`, time: hours[ind] });
+  });
+  return data;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,7 +94,11 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  let qty = 0;
+  arr.forEach(obj => {
+    obj.items[1].name === 'Treats'? qty += obj.items[1].quantity: 0;
+  });
+  return qty;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -194,7 +203,7 @@ Run your tests from the console: jest challenge-12.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should return the maximum number found', () => {
     expect(maxInArray([4, 2, 7, 5, 9, 2])).toStrictEqual(9);
   });
@@ -209,7 +218,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should create an object of data for each store', () => {
     expect(salesData(hoursOpen, grandTotal(cookieStores))).toStrictEqual([
       { sales: '88 cookies', time: '9 a.m.' },
@@ -230,7 +239,7 @@ xdescribe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return the number 24', () => {
     expect(howManyTreats(errands)).toStrictEqual(24);
   });
