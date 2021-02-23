@@ -2,10 +2,11 @@
 
 Write a function that reverses an array, in place
 
-Be careful of: empty arrays, arrays with only 1, odd numbered count, even numbered count
 <!-- Short summary or background information -->
 
 ## Challenge
+
+- Reverse an array.
 <!-- Description of the challenge -->
 
 ## Approach & Efficiency
