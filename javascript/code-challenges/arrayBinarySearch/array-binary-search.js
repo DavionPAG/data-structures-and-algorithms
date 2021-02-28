@@ -1,32 +1,27 @@
 'use strcit';
 
-let numArr = [2,4,6,8,10,11,12,14,16,18,20];
+function binarySearch(arr, input) {
 
+    let start = 0;
+    let end = arr.length - 1;
 
-function binarySearch (arr, input) {
-  let start = 0;
-  let end = arr[arr.length -1];
-  
+    while (start <= end) {
+        let mid = Math.ceil((start + end) / 2);
+        
+        if (arr[mid] === input) {
+            return (mid);
+        }
 
-while (start <= end) {
+        else if (arr[mid] > input) {
+            end = mid - 1;
+        }
 
-let mid = arr[(arr.indexOf(start) + arr.indexOf(end)) / 2];
+        else if (arr[mid] < input) {
+            start = mid + 1;
+        }
+    };
+    return -1;
+};
 
-  if (mid === input) {
-    return arr.indexOf(mid)
-  }
+module.exports = binarySearch;
 
-  else if (mid > input) {
-    end = arr.indexOf(mid - 1)
-  }
-
-  else if (mid < input) {
-    start = arr.indexOf(mid + 1)
-  }
-
-  else return -1;
-}
-
-}
-
-binarySearch(numArr, 11);
