@@ -11,3 +11,4 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 - [Reverse Array](https://github.com/Vektur/data-structures-and-algorithms/pull/19)
 - [Shift Array](https://github.com/Vektur/data-structures-and-algorithms/pull/20)
 - [Binary Search](https://github.com/Vektur/data-structures-and-algorithms/pull/22)
+- [Link List CC05](https://github.com/Vektur/data-structures-and-algorithms/pull/23)
