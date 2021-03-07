@@ -1,11 +1,6 @@
 'use strict';
 
-class Node {
-    constructor(val, next) {
-        this.val = val;
-        this.next = null;
-    }
-}
+let Node = require('./node.js');
 
 class LL {
     constructor() {
@@ -34,8 +29,8 @@ class LL {
         } else if (current.val !== val) {
           current = current.next;
         }
-         return false;
       }
+      return false;
     }
 
     toString() {
@@ -55,17 +50,5 @@ class LL {
 
 };
 
-let newList = new LL
+module.exports = LL;
 
-
-newList.insert(1);
-newList.insert(2);
-newList.insert(3);
-
-let inlist = newList.includes(4);
-
-let nodeStr = newList.toString();
-
-console.log('List ===> ', newList)
-console.log('Includes ===> ', inlist)
-console.log('String ===> ', nodeStr)
