@@ -8,6 +8,16 @@ class LL {
     };
 
     insert(val) {
+      let newNode = new Node(val);
+
+      if (!this.head) {
+        this.head = newNode
+      } else
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+
+    append(val) {
         let newNode = new Node(val);
         if(!this.head) {
             this.head = newNode;
@@ -19,6 +29,25 @@ class LL {
             current.next = newNode;
         }
         
+    }
+
+    insertBefore(val, newVal) {
+      let current = this.head;
+      while (current.val !== newVal)
+
+      if (!current.next) {
+        return `Input of'${newVal}' not found`;
+      }
+      
+      if (current.next.val === newVal) {
+        let newNode = new Node(newVal)
+        let oldNext = current.next;
+        current.next = newNode;
+        newNode.next = oldNext;
+      } else {
+        current = current.next;
+      }
+      
     }
 
     includes(val) {
@@ -51,4 +80,3 @@ class LL {
 };
 
 module.exports = LL;
-
