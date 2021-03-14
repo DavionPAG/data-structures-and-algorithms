@@ -16,16 +16,25 @@
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-- Create a Node class
+- Node class
     - val and next
-- Create insert function 
+- insert  
     - find last position
     - insert val
-- Create includes function
+- includes 
     - find node.val that matches input val
-- Create toString function
+- toString
     - stringify and save the val of each node appending next to previous.
+- insertBefore 
+    - find node.val that matches input val
+    - insert val before
+- insertAfter 
+    - find node.val that matches input val
+    - insert val after
+- kthFromEnd
+    - loop list(lenght minus input val)
+
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![WhiteBoard](./linked-lists-cc05.PNG)
+![WhiteBoard](./linked-list-CC07.jpg)
