@@ -13,3 +13,5 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 - [Binary Search](https://github.com/Vektur/data-structures-and-algorithms/pull/22)
 - [Link List CC05](https://github.com/Vektur/data-structures-and-algorithms/pull/23)
 - [Link List CC06](https://github.com/Vektur/data-structures-and-algorithms/pull/24)
+  - Completed with CC07
+- [Link List CC07](https://github.com/Vektur/data-structures-and-algorithms/pull/25)
