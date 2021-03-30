@@ -5,8 +5,9 @@
 
 ## Challenge
 
-- Create a stack and add push, pop, peek, and isEmpty Functionality
-- Create a queue and add enQueue, DeQueue, peek, and isEmpty Functionality
+- Create a stack and add push, pop, peek, and isEmpty functions
+- Create a queue and add enQueue, DeQueue, peek, and isEmpty functions
+- Create a psuedoQueue using 2 stacks and add enQueue, DeQueue functions
 <!-- Description of the challenge -->
 
 ## Approach & Efficiency
@@ -14,13 +15,14 @@
 
 - Keeping references to top and next when making changes to the stack
 - Keeping references to head, tail, and next when making changes to the queue
+- Push values back and forth between stacks when enQ/deQ
 
 ## Solution
 <!-- Embedded whiteboard image -->
 
-### WhiteBoard
-
 #### Stacks
-![Stacks](./Stacks-CC10.PNG)
+![Stacks](./media/Stacks-CC10.PNG)
 #### Queues
-![Queues](./Queues-CC10.PNG)
+![Queues](./media/Queues-CC10.PNG)
+#### pseudoQueue
+![psuedoQueue](./media/WB-pseudoQueue-CC11.PNG)
