@@ -16,3 +16,4 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 - [Link List CC07](https://github.com/Vektur/data-structures-and-algorithms/pull/25)
 - [Stacks/Queues CC10](https://github.com/Vektur/data-structures-and-algorithms/pull/26)
 - [PseudoQueue CC11](https://github.com/Vektur/data-structures-and-algorithms/pull/27)
+- [FIFO Animal Shelter CC12](https://github.com/Vektur/data-structures-and-algorithms/pull/29/)
