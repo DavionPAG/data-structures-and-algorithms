@@ -18,3 +18,4 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 - [PseudoQueue CC11](https://github.com/Vektur/data-structures-and-algorithms/pull/27)
 - [FIFO Animal Shelter CC12](https://github.com/Vektur/data-structures-and-algorithms/pull/30)
 - [Balanced Brackets CC13](https://github.com/Vektur/data-structures-and-algorithms/pull/31)
+- [BinaryTree/SearchTree CC15](https://github.com/Vektur/data-structures-and-algorithms/pull/33)
