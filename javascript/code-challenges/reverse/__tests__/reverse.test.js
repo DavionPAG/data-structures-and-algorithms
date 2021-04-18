@@ -2,7 +2,7 @@
 
 const reverse = require('../reverse.js');
 
-describe('Array Rerverse', () => {
+xdescribe('Array Rerverse', () => {
 
   it('should reverse the array', () => {
     let myArray = [1,2,3,4,5];
