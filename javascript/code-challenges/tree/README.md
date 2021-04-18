@@ -4,18 +4,16 @@
 
 ## Challenge
 
-- Create add() and contains() for a binary search tree
-- 
+- Create BST with add() and contains()
+- Create a BinaryTree class
+    - Define a method for each of the depth first traversals called preOrder, inOrder, and postOrder which returns an array of the values, ordered appropriately.
 <!-- Description of the challenge -->
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- preOrder, inOrder, and postOrder where provided in class
+- Im not sure if my solution for add() and contains is the most effiect
 
-- 
-
-## Solution
-<!-- Embedded whiteboard image -->
 
 #### WhiteBoard
-![Trees](./)
+![Trees](CC15-WB.PNG)
 
