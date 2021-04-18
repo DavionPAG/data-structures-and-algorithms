@@ -12,7 +12,7 @@ describe('', () => {
     newTree.add(10)
     newTree.add(7)
     newTree.add(9)
-    newTree.add(10)
+    newTree.add(21)
     newTree.add(7)
   });
 
@@ -28,5 +28,9 @@ describe('', () => {
     expect(newTree.root.left.val).toEqual(expect.any(Number))
     expect(newTree.root.right.val).toEqual(expect.any(Number))
   });
+
+  it('Can return the max value in a tree', () => {
+    expect(newTree.maxVal()).toEqual(21)
+  })
 
 });
