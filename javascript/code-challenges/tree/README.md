@@ -15,5 +15,9 @@
 
 
 #### WhiteBoard
+
+- BT/BST
 ![Trees](CC15-WB.PNG)
+- maxVal()
+![Trees](CC16-WB.PNG)
 
