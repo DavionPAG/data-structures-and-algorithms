@@ -12,8 +12,13 @@
 ## Approach & Efficiency
 - preOrder, inOrder, and postOrder where provided in class
 - Im not sure if my solution for add() and contains is the most effiect
+- maxVal uses preOrder traversal and compares the value of the current node to a 'max' variable that is returned after complete traverasal.
 
 
 #### WhiteBoard
+
+- BT/BST
 ![Trees](CC15-WB.PNG)
+- maxVal()
+![Trees](CC16-WB.PNG)
 

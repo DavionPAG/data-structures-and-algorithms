@@ -52,6 +52,19 @@ class BinaryTree {
     return nodes;
   }
 
+  maxVal() {
+    let max = 0;
+    let trek = (node) => {
+      max = node.val > max ? node.val : max;
+      if (node.left) { trek(node.left); }
+      if (node.right) { trek(node.right); }
+    };
+
+    trek(this.root);
+    
+    return max;
+  }
+
 }
 
 class BinarySearchTree extends BinaryTree {
