@@ -19,3 +19,5 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 - [FIFO Animal Shelter CC12](https://github.com/Vektur/data-structures-and-algorithms/pull/30)
 - [Balanced Brackets CC13](https://github.com/Vektur/data-structures-and-algorithms/pull/31)
 - [BinaryTree/SearchTree CC15](https://github.com/Vektur/data-structures-and-algorithms/pull/33)
+- [BinaryTree maxVal CC16](https://github.com/Vektur/data-structures-and-algorithms/pull/34)
+- [BinaryTree breadthFirst CC17](https://github.com/Vektur/data-structures-and-algorithms/pull/35)
