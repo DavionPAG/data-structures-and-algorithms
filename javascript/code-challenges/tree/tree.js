@@ -61,8 +61,26 @@ class BinaryTree {
     };
 
     trek(this.root);
-    
+
     return max;
+  }
+
+  breadthFirst() {
+    let nodes = [];
+    let queue = [];
+
+    queue.push(this.root); 
+
+    while(queue.length) {
+    
+      let currentNode = queue.shift(); 
+
+      nodes.push(currentNode.val);
+
+      if(currentNode.left) { queue.push(currentNode.left); }
+      if(currentNode.right) { queue.push(currentNode.right); }
+    }
+    return nodes;
   }
 
 }

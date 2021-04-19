@@ -11,9 +11,9 @@ describe('', () => {
     newTree.add(9)
     newTree.add(10)
     newTree.add(7)
-    newTree.add(9)
+    newTree.add(3)
     newTree.add(21)
-    newTree.add(7)
+    newTree.add(5)
   });
 
   it('search  can add a root', () => {
@@ -31,6 +31,11 @@ describe('', () => {
 
   it('Can return the max value in a tree', () => {
     expect(newTree.maxVal()).toEqual(21)
+  })
+
+  it('Can return an array of all values', () => {
+    console.log(newTree.breadthFirst())
+    expect(newTree.breadthFirst()).toEqual([9,7,10,3,21,5])
   })
 
 });
