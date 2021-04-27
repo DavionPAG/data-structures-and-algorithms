@@ -21,3 +21,4 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 - [BinaryTree/SearchTree CC15](https://github.com/Vektur/data-structures-and-algorithms/pull/33)
 - [BinaryTree maxVal CC16](https://github.com/Vektur/data-structures-and-algorithms/pull/34)
 - [BinaryTree breadthFirst CC17](https://github.com/Vektur/data-structures-and-algorithms/pull/35)
+- [KaryTree FizzBuzz](https://github.com/Vektur/data-structures-and-algorithms/pull/36)
