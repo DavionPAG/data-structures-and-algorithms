@@ -115,7 +115,7 @@ class BinarySearchTree extends BinaryTree {
   }
 
   contains(val) {
-    let nodeVal = this.root
+    let nodeVal = this.root;
     while (nodeVal) {
       if (nodeVal.val === val) return true;
 
