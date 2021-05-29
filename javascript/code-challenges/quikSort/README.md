@@ -1,3 +1,3 @@
-# Insertion Sort
+# Quick Sort
 
-![IMG](insert-sort.jpg)
+![IMG](quik-sort.jpg)
