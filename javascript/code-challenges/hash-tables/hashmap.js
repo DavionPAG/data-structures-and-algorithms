@@ -22,7 +22,7 @@ class HashMap {
 
   // Return a number that equates to a bucket index
   hash(key) {
-    let sumOfKeyLetters = key.split('').reduce( (acc, val) => {
+    let sumOfKeyLetters = key.split('').reduce((acc, val) => {
       let cc = val.charCodeAt(0);
       let num = acc + cc;
       return num;
@@ -36,12 +36,11 @@ class HashMap {
   // Add a key/value pair to the HT
   set(key, value) {
     let hash = this.hash(key); // should return a number that is an index of this.map
-
-    if( ! this.map[hash] ) {
+    if (!this.map[hash]) {
       this.map[hash] = new LinkedList();
     }
 
-    let entry = `${key}:${value}`; // { [key]: value } this is what it should be
+    let entry = { [key]: value };
 
     this.map[hash].append(entry);
 
@@ -50,21 +49,44 @@ class HashMap {
   // Return the value for the key from the HT
   get(key) {
     // 1: hash the key
+    let hashedKey = this.hash(key);
     // 2: Get the value of this.map[hash]
+    let bucket = this.map[hashedKey];
+    if (!bucket) return 'Invalid key';
+
     // 3: Traverse the linked list and find the actual one (because ... collisions)
-    // 4: Return what we find
+    let current = bucket.head;
+    while (current) {
+      if (Object.keys(current.value)[0] === key) {
+        return current.value;
+      }
+      // 4: Return what we find
+      current = current.next;
+    }
   }
 
   // return a bool if it's in the HT
   has(key) {
     // 1: hash the key
+    let hashedKey = this.hash(key);
     // 2: Get the value of this.map[hash]
+    let bucket = this.map[hashedKey];
+    if (!bucket) return false;
+
     // 3: Traverse the linked list and find the actual one (because ... collisions)
-    // 4: Return true or false
+    let current = bucket.head;
+    while (current) {
+      if (Object.keys(current.value)[0] === key) {
+        return true;
+      }
+      // 4: Return what we find
+      current = current.next;
+    }
   }
 
 }
 
+module.exports = HashMap;
 
 // classically -- 1024
 let people = new HashMap(16);
@@ -78,7 +100,9 @@ people.set('Nassir', 'Student');
 people.set('Dawit', 'Student');
 people.set('Rosie', 'Dog');
 
-// Violation of all things holy
-people.map.forEach( (data,i) => {
-  console.log(i, data && data.print());
-});
+
+
+//Violation of all things holy
+// people.map.forEach((data, i) => {
+//   console.log(i, data && data.print());
+// });
