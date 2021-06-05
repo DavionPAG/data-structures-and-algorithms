@@ -7,6 +7,49 @@ class BinaryTree {
     this.root = null;
   }
 
+  insert(val) {
+
+    const node = this.root;
+    if ( node === null ) {
+      this.root = new Node(val);
+      return;
+    }
+
+    let _insert = (node) => {
+
+      // Left is less  (< val)  ()< val  ()< val  ()< val
+      if ( val < node.val ) {
+        // If no left node, create a new node for it, with the current val
+        if ( node.left === null ) {
+          node.left = new Node(val);
+          return;
+        }
+        // Otherwise,
+        else if ( node.left !== null ) {
+          return _insert(node.left);
+        }
+      }
+      // Right is might (> val)
+      else if ( val >= node.val ) {
+        // If no right node, create a new node for it, with the current val
+        if ( node.right === null ) {
+          node.right = new Node(val);
+          return;
+        }
+        // Otherwise,
+        else if ( node.right !== null ) {
+          return _insert(node.right);
+        }
+      }
+      else {
+        return null;
+      }
+    };
+
+    _insert(node);
+
+  }
+
   preOrder() {
     let nodes = [];
 
@@ -85,7 +128,7 @@ class BinaryTree {
 
 }
 
-class BinarySearchTree extends BinaryTree {
+class BST extends BinaryTree {
   add(val) {
     let newNode = new Node(val);
 
@@ -119,11 +162,11 @@ class BinarySearchTree extends BinaryTree {
     while (nodeVal) {
       if (nodeVal.val === val) return true;
 
-      if (val < nodeVal.val) {
+      if (val < nodeVal.val && nodeVal.left) {
         nodeVal = nodeVal.left;
       }
 
-      if (val > nodeVal.val) {
+      if (val > nodeVal.val && nodeVal.right) {
         nodeVal = nodeVal.right;
       }
 
@@ -134,8 +177,5 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-module.exports = { 
-  BinaryTree: BinaryTree,
-  BinarySearchTree: BinarySearchTree
-}
+module.exports = BST;
 
