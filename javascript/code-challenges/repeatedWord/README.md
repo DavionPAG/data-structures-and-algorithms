@@ -3,16 +3,19 @@
 
 ## Challenge
 
-- Write a function called tree_intersection() that takes two binary tree parameters.
-- Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+- Find the first repeated word in a book(string).
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-- Do a traversal on tree A
-- for each node in tree A: do contains on tree B of the current value of tree A.
-- if the values match add that value to an arr
-- return arr;
+- Use regex to match all the words in a string.
+
+- Shift from the regex array to get a value
+
+- In a while loop, check remaining values of regex array to the shifted value
+
+- return if the values are equal
 
 ## WB
-![Intersect](treeIntersectWB.jpg)
+
+![Intersect](repeatWords.jpg)
