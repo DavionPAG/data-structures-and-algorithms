@@ -1,4 +1,4 @@
-# Tree Instersection
+# Repeated Word
 <!-- Short summary or background information -->
 
 ## Challenge
